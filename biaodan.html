@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>学习状态调查</h1>
+    <!-- <form action="/tijiao" method="GET"> -->
+        <p>
+
+            你的姓名：<input type="text" name="name">
+        </p>
+        <p>
+            
+            你的学好：<input type="text" name="number">
+        </p>
+       <p>
+
+            你的年龄：<input type="text" name="age">
+        </p>
+        <p>
+            
+            你的性别：<input type="text" name="sex">
+        </p>
+
+        <p>
+            留言fsdfa
+
+        </p>
+
+        <input type="submit" id="submit" value="submit">
+    <!-- </form> -->
+</body>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+       function aa(){
+            $.ajax( {  
+              url:'http://192.168.30.51/',
+              data:{  
+                         
+              },  
+             type:'get',  
+             cache:false,  
+             dataType:'json',  
+             success:function(data) {  
+                console.log(data);
+                 
+              },  
+              error : function(data) {  
+                 console.log(data);
+                   // alert("异常！");  
+              }  
+             });
+        } 
+        $("#submit").click(function(){
+            console.log("afaa");
+            aa();
+        }) 
+    </script>
+</html>
